@@ -38,7 +38,7 @@ def save_database(data: Dict[str, str]):
     conn.close()
 
 # getting mock data from the terminal while running it 
-def retrieve_clickpay_data() -> Dict[str, str]:
+def get_data() -> Dict[str, str]:
     print("Please enter the following details:")
     address = input("Enter Address: ")
     email = input("Enter Email: ")
@@ -93,7 +93,7 @@ $$$$$$$$\                                       $$\           $$$$$$$\          
         choice = input("select an option 1, 2, or 3: ")
         
         if choice == "1":
-            tenant_data = retrieve_clickpay_data()
+            tenant_data = get_data()
             save_database(tenant_data)
             print("successfully saved 2 db.")
         
